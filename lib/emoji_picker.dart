@@ -1695,9 +1695,7 @@ class _EmojiPickerState extends State<EmojiPicker> {
                         : CupertinoButton(
                             pressedOpacity: 0.4,
                             padding: EdgeInsets.all(0),
-                            color: widget.selectedCategory == Category.SMILEYS
-                                ? Colors.black12
-                                : Colors.transparent,
+                            color: Colors.transparent,
                             borderRadius: BorderRadius.all(Radius.circular(0)),
                             child: Center(
                               child: Icon(
@@ -1711,10 +1709,6 @@ class _EmojiPickerState extends State<EmojiPicker> {
                               ),
                             ),
                             onPressed: () {
-                              if (widget.selectedCategory == Category.SMILEYS) {
-                                return;
-                              }
-
                               pageController.jumpToPage(
                                   0 + recentPagesNum + recommendedPagesNum);
                             },
